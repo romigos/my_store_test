@@ -1,0 +1,14 @@
+<h1>Перелік товарів</h1>
+<table>
+  <tr>
+    <th>Назва</th>
+    <th>Ціна</th>
+  </tr>
+  <%= @items.each do |item| %>
+    <tr>
+      <th><%= item.name %></th>
+      <th><%= item.price %></th>
+  <% end %>
+  </tr>
+</table>
+
