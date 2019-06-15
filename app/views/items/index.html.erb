@@ -6,14 +6,17 @@
     <th>Опис</th>
     <th>Вага</th>
     <th>Наявність</th>
+    <th></th>
   </tr>
-  <%= @items.each do |item| %>
+  <% @items.each do |item| %>
     <tr>
       <td><%= item.name %></td>
       <td><%= item.price %></td>
       <td><%= item.description %></td>
       <td><%= item.weight %></td>
       <td><%= item.real %></td>
+      <td><%= link_to 'Редактувати', edit_item_path(item) %></td>
+      <td><%= link_to 'Видалити', item_path(item), method: :delete %></td>
     </tr>
   <% end %>
 </table>
