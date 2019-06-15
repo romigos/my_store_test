@@ -3,12 +3,18 @@
   <tr>
     <th>Назва</th>
     <th>Ціна</th>
+    <th>Опис</th>
+    <th>Вага</th>
+    <th>Наявність</th>
   </tr>
   <%= @items.each do |item| %>
     <tr>
-      <th><%= item.name %></th>
-      <th><%= item.price %></th>
+      <td><%= item.name %></td>
+      <td><%= item.price %></td>
+      <td><%= item.description %></td>
+      <td><%= item.weight %></td>
+      <td><%= item.real %></td>
+    </tr>
   <% end %>
-  </tr>
 </table>
 
